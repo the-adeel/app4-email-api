@@ -2,9 +2,10 @@ import requests
 from datetime import date
 
 topic = "tesla"
+api_key = ""
 url = (f"https://newsapi.org/v2/everything?q={topic}"
        "&sortBy=publishedAt"
-       "&apiKey=dbe17092c3b942188364fc8149ea9170&language=en")
+       f"&apiKey={api_key}&language=en")
 
 raw_request = requests.get(url)
 content = raw_request.json()
